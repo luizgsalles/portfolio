@@ -8,6 +8,10 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import altair as altair
 
+from urllib.parse import quote
+
+
+
 
 colunas = [
             'Nome do Destinatário'
@@ -29,7 +33,11 @@ colunas = [
            ]
 
 
-df = pd.read_excel(fr'C:/Users/ENGAGE/Desktop/teste_pend/db/Pendências_2024-05-22.xlsx', engine='openpyxl', usecols=colunas)
+# url = "https://docs.google.com/spreadsheets/d/1TA6yqJcuLXqoTAXy41jz7DZ5C6Y29PKM/edit?usp=drive_link&ouid=115090895786622954210&rtpof=true&sd=true/Pendências_2024-05-22.xlsx"
+# escaped_url = quote(url, safe=':/')
+# df = pd.read_excel(escaped_url, engine='openpyxl', usecols=colunas)
+
+df = pd.read_excel(fr'C:\Users\ENGAGE\GitHub\portfolio\Pendências_2024-05-22.xlsx', engine='openpyxl', usecols=colunas)
 
 ########################################################################################################################
 ########################################################################################################################
