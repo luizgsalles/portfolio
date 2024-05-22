@@ -8,7 +8,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import altair as altair
 
-from urllib.parse import quote
+# from urllib.parse import quote
 
 
 
@@ -37,7 +37,11 @@ colunas = [
 # escaped_url = quote(url, safe=':/')
 # df = pd.read_excel(escaped_url, engine='openpyxl', usecols=colunas)
 
-df = pd.read_excel(fr'C:\Users\ENGAGE\GitHub\portfolio\Pendências_2024-05-22.xlsx', engine='openpyxl', usecols=colunas)
+# df = pd.read_excel(fr'C:\Users\ENGAGE\GitHub\portfolio\Pendências_2024-05-22.xlsx', engine='openpyxl', usecols=colunas)
+
+url_raw = 'https://github.com/luizgsalles/portfolio/blob/90fb5d96c69779c11f4460c6faa7da09f7221a27/Pend%C3%AAncias_2024-05-22.xlsx'
+df = pd.read_excel(url_raw, engine='openpyxl', usecols=colunas)
+
 
 ########################################################################################################################
 ########################################################################################################################
